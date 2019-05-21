@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="css\styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,500,500i,700,700i,900,900i" rel="stylesheet">
+	
+	<script>
+	function showalert(type)
+		{	
+			document.getElementById(type).style.display = "block";		
+		setTimeout(function() 	{document.getElementById(type).style.display = "none";},4000);		
+		}
+		
+	function hidealert(type)
+		{	
+			setTimeout(function() {document.getElementById(type).style.display = "none";},1);			
+		}
+		
+	</script>	
+		
+    <script>
+        function togNav() 
+        {		
+            if (document.getElementById("mySidenav").style.width == "40px") 
+            {	
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+				document.getElementById("longnav").style.display = "block";
+				document.getElementById("shortnav").style.display = "none";				
+				
+            } else {
+				
+				document.getElementById("mySidenav").style.width = "40px";
+                document.getElementById("main").style.marginLeft = "40px";
+				document.getElementById("longnav").style.display = "none";
+				document.getElementById("shortnav").style.display = "block";		
+            }
+        }
+    </script>
+	
+</head>
+
+<body id="main">
+
+    <div id="mySidenav" class="sidenav" >
+        <a class="closebtn" onclick="togNav()">&#9776;</a>
+		<div id="longnav">
+			<a href="#">Customer</a>
+			<a href="#">Drugs</a>
+			<a href="#">Doctors</a>
+			<a href="#">Something I forgot</a>
+		</div>
+		
+		<div id="shortnav">
+			<a href="#"><img src="images\icon1.png" alt="" width="32" height="32"></a>
+			<a href="#"><img src="images\icon2.png" alt="" width="32" height="32"></a>
+			<a href="#"><img src="images\icon3.png" alt="" width="32" height="32"></a>	
+		</div>
+		
+    </div>
+
+<div id="maincontent" >
+<h1> Style H1</h1>
+<h3>Heading Style H3</h3>
+<h4>Heading Style H4</h4>
+<h5>Heading Style H5</h5>
+	<h6>Heading Style H6</h6>
+	
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+	<div id="blue" class="alertbox blue">
+	Information
+		<span onclick="hidealert('blue');" >&times;</span>
+	</div>
+	
+	<div id="red" class="alertbox red">
+	Error
+		<span onclick="hidealert('red');">&times;</span>
+	</div>
+	
+	<div id="green" class="alertbox green">
+	Suxess
+		<span onclick="hidealert('green');">&times;</span>
+	</div>
+	
+		<br>
+		<input type="submit" value="Poop-Up" href="#popup" />
+		<br>
+
+			<div id="popup" class="overlay">
+				<div class="content">
+				<a class="close" href="#">&times;</a>
+
+					<p>This is done totally without JavaScript. Just HTML and CSS.</p>
+				</div>
+			</div>
+	
+			<div id="popup1" class="overlay">
+				<div class="popup">
+					<h2>Info box</h2>
+					<a class="close" href="#">&times;</a>
+					<div class="content">
+						<p>This is done totally without JavaScript. Just HTML and CSS.</p>
+					</div>
+				</div>
+			</div>
+	
+	
+	
+	
+	<br>
+	<input type="submit" value="Show alert box RED" name="submit" onclick="showalert('red');" />
+	<br>
+	
+		<br>
+	<input type="submit" value="Show alert box BLUE" name="submit" onclick="showalert('blue');" />
+	<br>
+	
+			<br>
+	<input type="submit" value="Show alert box GREEN" name="submit" onclick="showalert('green');" />
+	<br>
+	
+	<form class="boxshadow">
+  <div class="form-row">
+    <div class="form-group col2">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col2">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div>
+  </div>
+  
+  <div class="form-group col1">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+
+  <div class="form-group col1">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col3">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col3">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+         <option>Item 0</option>
+		 <option>Item 1</option>
+		 <option>Item 2</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col3">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  
+  <div class="form-group col1">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">&nbsp;Check me out</label>
+	  
+    </div>
+  </div>
+<div class="buttons">
+  <input type="submit" value="Send Form" name="submit" />
+<input type="reset" value="Clear Form" name="reset" />
+  </div>
+</form>
+
+ <br>
+
+	
+    <form class="boxshadow">
+        <h2>Form-H2</h2><br>
+<fieldset>
+	
+<div class="form-row">
+			
+		<div class="form-group col2">	
+		<label for="drug">Brand Name</label>
+       
+        <input type="text" name="drug" id="drug" title="Name of the drug" autocomplete="on" placeholder="Effexor" />
+		</div>	
+						
+			
+		<div class="form-group col2">
+            <label for="generic">Generic Name</label>
+            
+            <input type="text" name="generic" id="generic" title="Generic name of the drug" placeholder="Venlafaxine" />
+
+        </div>
+			
+</div>
+	
+<div class="form-row">	      
+        <div class="form-group col4">
+            <label for="formType">Drug Form Type</label>
+
+              <select name="formType">
+                  <option value="Tablet">Tablet</option>
+                  <option value="Capsule">Capsule</option>
+                  <option value="Lotion">Lotion</option>
+                  <option value="Cream">Cream</option>
+                  <option value="Ointment">Ointment</option>
+                  <option value="Patch">Patch</option>
+              </select>
+
+        </div>
+	
+	    <div class="form-group col4">
+            <label for="strenght">Strength in mg</label>
+            <input type="number" name="strength" id="strength" title="Strength of medicine" placeholder="35"/>
+        </div>
+		
+	 	<div class="form-group col2">
+            <label for="supplier">Supplier Name</label>
+            <input type="text" name="supplier" id="supplier" title="GName Of Supplier" placeholder="Pfizer" />
+        </div>	
+</div>
+	
+<div class="form-row">	 
+	    <div class="form-group col2">
+            <label for="usage">Usage Instructions</label>
+            <textarea  rows="2" cols="50"  name="usage" id="usage" title="Drug Usage Instructions" placeholder="To be taken 30 minutes before bed. Avoid grapefruit while taking this medication."></textarea>
+
+        </div>
+	
+	    <div class="form-group col2">
+            <label for="SideEffects">Side Effects </label>
+            <textarea  rows="4" cols="50" name="SideEffects" id="SideEffects" title="Drug Side Effects"  placeholder="Nausea, Dry Mouth, Headaches, dizziness , fast heartbeat, chest pain,depression. This is not an exhaustive list. Check with your doctor immediately if any side effects begin to cause difficulty or concern" required></textarea>
+        </div>	
+</div>	
+		
+</fieldset>       
+		
+	
+
+<fieldset>  
+	<div class="form-row col1">
+        <div class="form-group col4">
+            <label for="cPrice">Cost Price</label>
+
+            <input type="number" name="cPrice" />
+
+        </div>
+		
+		<div class="form-group col4">
+            <label for="rPrice">Retail Price</label>
+
+            <input type="number" name="rPrice"  />
+
+        </div>
+		
+		<div class="form-group col4">
+            <label for="orderLevel">Re-order level</label>
+
+            <input type="number" name="orderLevel" />
+
+        </div>
+		
+		<div class="form-group col4">
+            <label for="orderQuantity">Re-order quantity</label>
+
+            <input type="number" name="orderQuantity" />
+ 
+        </div>
+	</div>
+</fieldset>  
+<div class="buttons">
+  <input type="submit" value="Send Form" name="submit" />
+
+  </div>
+
+    </form>
+	
+	
+	<div class="table boxshadow">
+	<table cellpadding="5" border="1">
+         
+            <thead>
+				<tr>
+                    <th class="Head">Brand Name</th>
+                    <th class="Head">Generic Name</th>
+                    <th class="Head">Drug Form Type </th>
+                    <th class="Head">Supplier Name</th>
+                    <th class="Head">Strength in mg</th>
+                    <th class="Head">Usage Information</th>
+                    <th class="Head">Cost Price</th>
+                    <th class="Head">Retail Price</th>
+                    <th class="Head">Re-order level</th>
+                    <th class="Head">Re-order quantity</th>
+				</tr>
+            </thead>
+			 <tbody>
+            <tr>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+            </tr>
+            <tr>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+            </tr>
+            <tr>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+            </tr>
+            <tr>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+               <td>TableContent</td>
+            </tr>
+         </tbody>
+      </table>
+	</div>
+<br>
+	
+	
+
+<br><br>
+	
+</body>
+
+</html>
